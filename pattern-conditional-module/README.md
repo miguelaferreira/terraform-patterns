@@ -2,9 +2,9 @@
 
 The pattern to achieve this is the following:
 1. Add a `var.enabled` to the module
-2. Use that `variable` to set `count` on every resource in the module
+2. Use that variable to set `count` on every resource in the module
 3. If the module declares sub-modules (and if those implement this pattern as well) pass it along to the sub-modules
-4. For resources that weer already conditional, use the variable in disjunction with whatever other logic in a `local`.
+4. For resources that where already conditional, use the variable in disjunction with whatever other logic in a local value.
 5. Module outputs encapsulate the conditional nature of the values, that is, the fact that resources are conditional is not visible from outputs
 
 These choices have a negative impact on the readability and maintainability of the code.
